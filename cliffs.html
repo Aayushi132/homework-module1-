@@ -66,7 +66,7 @@
         <!-- End Main Content -->
       <section>
         <ul id="partners">
-          <li class="partner">
+          <!--<li class="partner">
             <img src="partners/partner-bustour.png" alt="Partner Bus Tours" />
           </li>
           <li class="partner">
@@ -98,7 +98,7 @@
               src="partners/partner-tourgroup.png"
               alt="Partner Tour Group"
             />
-          </li>
+          </li>-->
         </ul>
       </section>
       <!-- Footer Information-->
@@ -121,6 +121,24 @@
         </div>
       </footer>
     </div>
+    
     <!-- End Container -->
+
+    <script>
+      function imagesFooter() {
+        for (var i=1; i<7; i++) {
+          var ul=document.getElementById("partners");
+          var li=document.createElement("li");
+          li.setAttribute("class", "partner");
+          var img=document.createElement("img");
+          img.src="partners/" + i + ".png";
+          li.appendChild(img);
+          ul.appendChild(li);      
+          }
+
+      }
+
+      imagesFooter();
+    </script>
   </body>
 </html>

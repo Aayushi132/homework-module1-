@@ -7,6 +7,21 @@ header {
   background: no-repeat lightgrey url(images/cliff_ocean.jpg);
   background-size: 1500px;
 }
+#timeofday {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3a3a3a;
+  background: linear-gradient(
+    0deg,
+    rgba(251, 215, 139, 1) 0%,
+    rgba(118, 213, 245, 1) 100%
+  );
+  text-align: center;
+  padding: 1em 0;
+}
+#clock {
+  color: #125688;
+}
+
 .main-header {
   background-color: rgb(255, 255, 255, 0.8);
   width: 700px;
@@ -26,7 +41,6 @@ header {
 }
 .main-menu ul li {
   list-style-type: none;
-  display: inline-block;
   float: left;
   padding-left: 25px;
   padding-right: 25px;
@@ -231,12 +245,19 @@ textarea {
   border: none;
   font-weight: bold;
 }
+.row {
+  margin-left: 6%;
+}
 .cliffs {
   list-style-type: none;
+  display: inline-grid;
+  padding: 1% 1.5%;
 }
 #cliff label {
   background: #852b1b;
   text-align: center;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
   width: 450px;
   color: #fff;
 }
@@ -248,8 +269,8 @@ header {
   min-height: 400px;
   padding-top: 3em;
 }
-#cliff header {
-  background: no-repeat lightgrey url(images/cliff_ocean.jpg);
+#cliffs header {
+  background: no-repeat lightgrey url(images/forest_cliff.jpeg);
   background-size: 1500px;
 }
 .cliff-header {
