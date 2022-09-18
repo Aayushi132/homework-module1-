@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Aayushi's First Web Page</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body id="contact">
+    <!-- Container to wrap everything -->
+    <div id="container">
+      <!-- Brand of Website -->
+      <header>
+        <div class="main-header">
+          <div class="logo">
+            <img src="images/logo.png" alt="Great Cliffs Logo" width="125" />
+           
+      <!-- Main Navigation -->
+      <nav class="main-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cliffs.html">Cliffs</a></li>
+          <li><a href="activities.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="active"><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      </div>
+        </div>
+      </header>
+      <!-- End Main Navigation -->
+      <main>
+        <ul id="gallery">
+            <!--<div class="row">
+            <div class="column imageBox"> 
+               
+                <img src="gallery/1.jpg" class="photo" style="width:80%">
+                <figcaption>BEACH CLIFF</figcaption>
+                
+                <div class="middle">
+                    <div class="text">Beautiful cliff by the beach</div>
+                </div>       
+            </div>
+             <div class="column imageBox">
+<img src="gallery/2.jpg" class="photo" style="width:80%">
+                <figcaption>ORANGE CLIFF</figcaption>
+                
+  <div class="middle">
+    <div class="text">Beautiful cliff by the beach</div>
+  </div>       
+            </div>
+            </div>
+            <div class="row">
+            <div class="column imageBox">
+<img src="gallery/2.jpg" class="photo" style="width:80%">
+                <figcaption>ORANGE CLIFF</figcaption>
+                
+  <div class="middle">
+    <div class="text">Beautiful cliff by the beach</div>
+  </div>       
+            
+            </div>
+             <div class="column">
+
+            </div>
+            </div>
+            <div class="row">
+            <div class="column">
+
+            </div>
+             <div class="column">
+
+            </div>
+            </div>
+            <div class="row">
+            <div class="column">
+
+            </div>
+             <div class="column">
+
+            </div>
+            </div>
+            <div class="row">
+            <div class="column">
+
+            </div>
+             <div class="column">
+
+            </div>
+            </div>-->
+        </ul>
+      </main>
+      <section>
+        <ul id="partners">
+          <!--<li class="partner">
+            <img src="partners/partner-bustour.png" alt="Partner Bus Tours" />
+          </li>
+          <li class="partner">
+            <img
+              src="partners/partner-cabinrental.png"
+              alt="Partner Cabin Rental"
+            />
+          </li>
+          <li class="partner">
+            <img
+              src="partners/partner-campingadv.png"
+              alt="Partner Camping Adventure"
+            />
+          </li>
+          <li class="partner">
+            <img
+              src="partners/partner-collegetours.png"
+              alt="Partner College Tours"
+            />
+          </li>
+          <li class="partner">
+            <img
+              src="partners/partner-rentalbike.png"
+              alt="Partner Bike Rentals"
+            />
+          </li>
+          <li class="partner">
+            <img
+              src="partners/partner-tourgroup.png"
+              alt="Partner Tour Group"
+            />
+          </li>-->
+        </ul>
+      </section>
+      <!-- Footer Information-->
+
+      <footer>
+        <div id="nondisclaimer">
+          <div class="copy">&copy; Copyright 2020 :: GreatCliffs.com</div>
+          <div class="social">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+          </div>
+        
+        <div id="disclaimer">
+          <p>
+            This website is designed and created solely for educational purposes
+            only at Westcliff University. All contents are not intended for any
+            commercial gain or use.
+          </p>
+        </div>
+      </footer>
+    </div>
+    <!-- End Container -->
+    <script>
+      function imagesFooter() {
+        for (var i=1; i<7; i++) {
+          var ul=document.getElementById("partners");
+          var li=document.createElement("li");
+          li.setAttribute("class", "partner");
+          var img=document.createElement("img");
+          img.src="partners/" + i + ".png";
+          li.appendChild(img);
+          ul.appendChild(li);      
+          }
+
+      }
+
+      imagesFooter();
+
+      function imagesGallery() {
+        const captionArray=['BEACH CLIFF', 'ORANGE CLIFF', 'GREEN CLIFF', 'TALL CLIFF', 'HAWAII CLIFF', 'PATHWAY CLIFF', 'EDGE CLIFF', 'NORTH EDGE CLIFF', 'HIKE CLIFF', 'SOUTH CLIFF'];
+        const descriptionArray=['Beautiful cliff by the beach', 
+        'Cliff view during November-October',
+        'Scenic views during summer',
+    'Bottom to top view of the cliff',
+'Scenic ocean views',
+'Take a walk along the edge',
+ 'A thrilling view',
+ 'Sunset views from the cliff',
+ 'Picturesque views',
+ 'A snow covered view'
+];
+var count=0;
+for (var i=0; i<=4; i++) {
+    var ul=document.getElementById("gallery");
+    var row=document.createElement("div");
+    row.setAttribute("class", "row");
+    for (var j=1; j<=2; j++) {
+    var column=document.createElement("div");
+    column.setAttribute("class", "column imageBox");
+    var imageCount=count + 1;
+    var img=document.createElement("img");
+    img.src="gallery/" + imageCount + ".jpg";
+    img.setAttribute("class", "photo");
+    var figCaption=document.createElement("figcaption");
+    figCaption.innerHTML=captionArray[count];
+    var middleDiv=document.createElement("div");
+    middleDiv.setAttribute("class", "middle");
+    var textDiv=document.createElement("div");
+    textDiv.setAttribute("class", "text");
+    textDiv.innerHTML=descriptionArray[count];
+    count=count + 1;
+    middleDiv.appendChild(textDiv);
+    column.appendChild(img);
+    column.appendChild(figCaption);
+    column.appendChild(middleDiv);
+    row.appendChild(column);
+    }
+    ul.appendChild(row);
+} 
+      }
+      imagesGallery();
+    </script>
+  </body>
+</html>
