@@ -5,146 +5,7 @@
     <meta charset="UTF-8" />
     <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-      header {
-        width: 100%;
-        min-height: 400px;
-        padding-top: 3em;
-      }
-      #home header {
-        background: no-repeat lightgrey url(images/cliff_ocean.jpg);
-        background-size: 1500px;
-      }
-      .main-header {
-        background-color: rgb(255, 255, 255, 0.8);
-        width: 700px;
-        margin: 2em auto 0;
-        min-height: 100px;
-        height: 100px;
-      }
-      .main-header .logo img {
-        width: 100px;
-        height: 100px;
-        margin: 0 2em 0 0;
-        float: left;
-      }
-      .main-menu {
-        margin-left: 227px;
-        font-weight: 400;
-      }
-      .main-menu ul li {
-        list-style-type: none;
-        display: inline-block;
-        float: left;
-        padding-left: 25px;
-        padding-right: 25px;
-        border-left: 1px solid rgba(202, 204, 202, 0.6);
-        line-height: 100px;
-        text-transform: uppercase;
-        font-size: 14px;
-      }
-      .main-menu ul li a {
-        text-decoration: none;
-        color: #888;
-      }
-      .main-menu ul li a:hover {
-        color: #9ed034;
-      }
-      .main-menu ul li.active {
-        background: #9ed034;
-        border: nome;
-      }
-      .main-menu ul li.active a {
-        color: #fff;
-      }
-      /*Main*/
-      main h2 {
-        font-family: Arial, Helvetica, sans-serif;
-        color: #9ed034;
-      }
-
-      main h3 {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      main p {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      main {
-        padding: 5%;
-      }
-
-      /*Partners*/
-      section {
-        width: 100%;
-        background-color: #4288c3;
-      }
-      section #partners {
-        width: 1200px;
-        padding: 3em 0 2em 0;
-        margin: 0 auto;
-        text-align: center;
-      }
-      section #partners .partner {
-        display: inline-block;
-        margin: 0 0.75em;
-        padding: 1.3em 1.5em;
-        background-color: #fff;
-        border-radius: 50%;
-      }
-      section #partners .partner img {
-        width: 90px;
-        height: 90px;
-        
-      }
-      /*Footer*/
-      footer {
-        width: 100%;
-        height: 155px;
-        padding-bottom: 1em;
-        background-color: #ecfab8;
-      }
-      footer #nondisclaimer .copy {
-        padding: 3.5em 3.5em 3.5em 13em;
-        float: left;
-        font-size: 0.9em;
-      }
-      footer #nondisclaimer .social {
-        padding: 2.5em;
-        margin-right: 9.25em;
-        float: right;
-      }
-      footer #disclaimer {
-        clear: both;
-      }
-      footer #disclaimer p {
-        font-size: 0.85em;
-        text-align: center;
-      }
-      footer #nondisclaimer .social .fa {
-        padding: 15px;
-        font-size: 15px;
-        width: 15px;
-        text-align: center;
-        text-decoration: none;
-        margin: 0 4px;
-        border-radius: 50%;
-      }
-      footer #nondisclaimer .social .fa:hover {
-        opacity: 0.7;
-      }
-      footer #nondisclaimer .social .fa-facebook {
-        background: #3b5998;
-        color: white;
-      }
-      footer #nondisclaimer .social .fa-twitter {
-        background: #55ACEE;
-        color: white;
-      }
-      footer #nondisclaimer .social .fa-instagram {
-        background: #125688;
-        color: white;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body id="home">
     <!-- Container to wrap everything -->
@@ -158,7 +19,7 @@
             <nav class="main-menu">
               <ul>
                 <li class="active"><a href="index.html">Home</a></li>
-                <li>Cliffs</li>
+                <li><a href="cliffs.html">Cliffs</a></li>
                 <li><a href="activities.html">Events</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
@@ -167,6 +28,10 @@
           </div>
         </div>
       </header>
+      <section id="timeofday">
+        <span>Your Current Local Time:</span>
+        <span id="clock"></span>
+      </section>
 
       <!-- Main Content -->
       <main>
@@ -246,6 +111,87 @@
         </div>
       </footer>
     </div>
+
+    <!--JavaScript Codes-->
+    <script>
+      //Create a time data function//
+      function currentTime() {
+        //Declare variables
+        var d = new Date(); //Get current date
+        var hr = d.getHours(); //Get current hours
+        var min = d.getMinutes(); //Get current minutes
+        var sec = d.getSeconds(); //Get current seconds
+        var ampm; //Declare emply variable to store Am or Pm
+        var utchr = d.getUTCHours(); //Get GMT
+        var timeDiff; //To store time difference between GMT and local
+        var adjTimeDiff; //To store time difference converted to positive number
+        var timeZone; //To store the 4 time zones (PT, MT, CT, ET)
+        var timeZoneFullName; //To store full name of TimeZone
+
+
+        
+
+        //Add 0 to single digits for seconds
+        if (sec < 10) {
+          sec = "0" + sec;
+        }
+        if (min < 10) {
+          min = "0" + min;
+        }
+        //Determine AM or PM string
+        if (hr == 12) {
+          ampm = "PM";
+        } else if (hr > 12) {
+          hr -=12; 
+          ampm = "PM";
+        } else {
+          ampm = "AM";
+        }
+
+       //Run time data every one second
+       setInterval(currentTime, 1000);
+      
+        var mth = d.getMonth(); //Get current month (0-11)
+        //Convert mth index number to actual month number (1-12)
+        
+        var monthNum = mth+1;
+        //Determine if currently standard time (summer) by adjusting GMT
+        if (monthNum >= 3 && monthNum <= 10) {
+            utchr = utchr + 1;
+        }
+        
+       timeDiff = utchr - hr;
+
+       if(timeDiff < 0) {
+         adjTimeDiff = -(timeDiff);
+       } else {
+         adjTimeDiff = timeDiff;
+       }
+
+
+       if (adjTimeDiff == 4){
+        timeZone = "PT"
+       }else if(adjTimeDiff == 6){
+         timeZone = "CT"
+       }else if(adjTimeDiff == 7){
+         timeZone = "ET"
+       }else if(adjTimeDiff == 5){
+         timeZone = "MT"
+       }
+
+       //timeZone = d.toLocaleDateString(undefined, {day:'2-digit', timeZoneName: 'short' }).substring(3);
+      
+       //Assemble time format to display
+      var time = hr + ":" + min + ":" + sec + " " + ampm + " " + timeZone;
+      //Display current local time and time zone on HTML elements
+      document.getElementById("clock").innerText = time; //adding time
+       
+    }
+
+    //Initial run of time data function
+    currentTime();
+    
+    </script>
     <!-- End Container -->
   </body>
 </html>
