@@ -241,7 +241,7 @@ textarea {
   height: 35px;
   color: white;
   margin-left: 28em;
-  background: #4977d1;
+  /*background: #4977d1;*/
   border: none;
   font-weight: bold;
 }
@@ -332,4 +332,24 @@ figcaption {
 
 #gallery .row {
   display: inline-flex;
+}
+
+.randomcodes input {
+  width: 10em;
+  margin-left: 16.8%;
+}
+
+#codes {
+  background-color: rgb(204, 201, 201);
+  width: 6em;
+  height: 2em;
+  text-align: center;
+  display: inline-block;
+  padding-top: 1em;
+  margin-left: .5em;
+}
+
+.randomcodes {
+  width: -webkit-fill-available;
+    display: inline-block;
 }

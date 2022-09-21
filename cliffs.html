@@ -23,6 +23,7 @@
                 <li class="active"><a href="cliffs.html">Cliffs</li>
                 <li><a href="activities.html">Events</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
               </ul>
             </nav>
             <!-- End Main Navigation -->
@@ -124,21 +125,6 @@
     
     <!-- End Container -->
 
-    <script>
-      function imagesFooter() {
-        for (var i=1; i<7; i++) {
-          var ul=document.getElementById("partners");
-          var li=document.createElement("li");
-          li.setAttribute("class", "partner");
-          var img=document.createElement("img");
-          img.src="partners/" + i + ".png";
-          li.appendChild(img);
-          ul.appendChild(li);      
-          }
-
-      }
-
-      imagesFooter();
-    </script>
+    <script src="js/site_scripts.js"></script>
   </body>
 </html>

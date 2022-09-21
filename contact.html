@@ -22,6 +22,7 @@
           <li><a href="cliffs.html">Cliffs</a></li>
           <li><a href="activities.html">Events</a></li>
           <li class="active"><a href="contact.html">Contact</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
         </ul>
       </nav>
       </div>
@@ -77,6 +78,16 @@
         <label>How did you hear about us:</label>  
         <textarea></textarea>
     </div><br/>
+
+    <!--Random Codes-->
+    <div class="randomcodes">
+      <input type="text" name="randomcode" placeholder="Enter characters">
+      <p id="codes">
+        <span></span>
+      </p>
+    </div>
+
+
 
     <div class="button">
         <input type="submit" value="Inquire">
@@ -142,21 +153,7 @@
       </footer>
     </div>
     <!-- End Container -->
-    <script>
-      function imagesFooter() {
-        for (var i=1; i<7; i++) {
-          var ul=document.getElementById("partners");
-          var li=document.createElement("li");
-          li.setAttribute("class", "partner");
-          var img=document.createElement("img");
-          img.src="partners/" + i + ".png";
-          li.appendChild(img);
-          ul.appendChild(li);      
-          }
-
-      }
-
-      imagesFooter();
-    </script>
+    <script src="js/site_scripts.js"></script>
+    <script src="js/randomcodes.js"></script>
   </body>
 </html>
