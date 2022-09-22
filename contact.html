@@ -6,7 +6,7 @@
     <title>Aayushi's First Web Page</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
-  <body id="contact">
+  <body id="contact" onLoad="disableButton(true)">
     <!-- Container to wrap everything -->
     <div id="container">
       <!-- Brand of Website -->
@@ -81,7 +81,7 @@
 
     <!--Random Codes-->
     <div class="randomcodes">
-      <input type="text" name="randomcode" placeholder="Enter characters">
+      <input id="codeentered" type="text" name="randomcode" placeholder="Enter characters">
       <p id="codes">
         <span></span>
       </p>
@@ -90,7 +90,7 @@
 
 
     <div class="button">
-        <input type="submit" value="Inquire">
+        <button id="submit" type="submit" value="Inquire"> Inquire </button>
     </div> 
 </fieldset>  
 </form>

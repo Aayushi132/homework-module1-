@@ -236,7 +236,7 @@ textarea {
 .radios input {
   font-family: Arial, Helvetica, sans-serif;
 }
-.button input {
+.button button {
   width: 85px;
   height: 35px;
   color: white;
