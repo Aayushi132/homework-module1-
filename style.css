@@ -353,3 +353,9 @@ figcaption {
   width: -webkit-fill-available;
     display: inline-block;
 }
+
+.greenBackground {
+  background-color: yellowgreen;
+  color: #eeffe6;
+  font-weight: bold;
+}
