@@ -24,8 +24,10 @@ $(function () {
 
 //User interaction with table cells//
 
-
 $("td").click(function () {
+  var index = $(this).index();
+  var heading = $("th").eq(index).text();
+  debugger;
   var content = $(this).text();
 
   if (content != "Not Available") {
@@ -34,7 +36,7 @@ $("td").click(function () {
     if ($(this).hasClass("greenBackground")) {
       $("#displaySelected").css("visibility", "visible");
       $("#displaySelected").css("margin-top", "2em");
-      $("#result").append("<p>" + content + "</p>");
+      $("#result").append("<p>" + content + " at " + heading + "</p>");
     } else {
       $("#result p:contains(" + content + ")").remove();
 
@@ -45,4 +47,3 @@ $("td").click(function () {
     }
   }
 });
-
