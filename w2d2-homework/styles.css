@@ -210,6 +210,23 @@ footer #nondisclaimer .social .fa-instagram {
     margin: 1em;
     height: 250px;
   }
+  footer {
+    width: 100%;
+    height: 155px;
+    padding-bottom: 1em;
+    background-color: #ecfab8;
+  }
+  .social {
+    margin-top: 2em !important;
+    padding-top: 2em !important;
+  }
+
+  footer #disclaimer {
+  clear: both;
+  background-color: #ecfab8;
+  height: 4em;
+}
+
 
   /* #myNavbar ul li {
     display: contents;
