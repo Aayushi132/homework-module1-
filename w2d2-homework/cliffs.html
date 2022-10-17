@@ -4,31 +4,66 @@
     <title>Great Cliffs of California</title>
     <meta charset="UTF-8" />
     <!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body id="cliffs">
     <!-- Container to wrap everything -->
     <div id="container">
       <!-- Brand of Website -->
-      <header>
-        <div class="cliff-header">
-            
-          <div class="logo">
-            <img src="images/logo.png" alt="Great Cliffs Logo" width="125" />
-            <!-- Main Navigation -->
-            <nav class="main-menu">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="cliffs.html">Cliffs</li>
-                <li><a href="activities.html">Events</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-              </ul>
-            </nav>
-            <!-- End Main Navigation -->
-          </div>
+       <div class="main-header">
+        <div class="logo">
+          <!-- <img src="images/logo.png" alt="Great Cliffs Logo" width="125" /> -->
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+              <img
+                src="images/logo.png"
+                class="navbar-brand logo"
+                alt="Great Cliffs Logo"
+                width="125"
+              />
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#myNavbar"
+                aria-controls="myNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="navbar-nav">
+                  <a class="nav-link" href="index.html">HOME</a>
+                  <a class="nav-link active"
+                    aria-current="page" href="cliffs.html">CLIFFS</a>
+                  <a class="nav-link" href="activities.html">EVENTS</a>
+                  <a
+                    class="nav-link"
+                    href="contact.html"
+                    >CONTACT</a
+                  >
+                </div>
+              </div>
+            </div>
+          </nav>
         </div>
+      </div>
+      <header>
+       
       </header>
 
       <!-- Main Content -->
@@ -42,11 +77,11 @@
             <ul id="cliff">
                 <li class="cliffs">
                     <label>West Cliff</label>
-                    <img src="images/cliff-west-sea.jpeg" alt="West Cliff"/>
+                    <img src="images/cliff-west-sea.jpg" alt="West Cliff"/>
                </li>
                 <li class="cliffs">
                     <label>North Cliff</label>
-                    <img src="images/cliff-north-mountain.jpeg" alt="North Cliff"/>
+                    <img src="images/cliff-north-mountain.jpg" alt="North Cliff"/>
                 </li>
             </ul>
         </div>
@@ -54,11 +89,11 @@
             <ul id="cliff">
                 <li class="cliffs">
                     <label>East Cliff</label>
-                    <img src="images/cliff-east-river.jpeg" alt="East Cliff"/>
+                    <img src="images/cliff-east-river.jpg" alt="East Cliff"/>
                 </li>
                 <li class="cliffs">
                     <label>South Cliff</label>
-                    <img src="images/cliff-south-canyon.jpeg" alt="South Cliff"/>
+                    <img src="images/cliff-south-canyon.jpg" alt="South Cliff"/>
                 </li>
             </ul>
         </div>
@@ -130,7 +165,16 @@
     </div>
     
     <!-- End Container -->
-
-    <script src="js/site_scripts.js"></script>
+ <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    
   </body>
 </html>
