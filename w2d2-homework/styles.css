@@ -291,7 +291,7 @@ textarea {
   width: 90px;
   height: 35px;
   color: white;
-  margin-left: 28em;
+  margin-left: 23em;
   /*background: #4977d1;*/
   border: none;
   font-weight: bold;
@@ -336,7 +336,7 @@ textarea {
 
 .randomcodes input {
   width: 10em;
-  margin-left: 16.8%;
+  margin-left: 14.9%;
 }
 
 #codes {
@@ -346,7 +346,7 @@ textarea {
   text-align: center;
   display: inline-block;
   padding-top: 3.5px;
-  margin-left: 0.5em;
+  margin-left: .5em;
 }
 
 .randomcodes {
