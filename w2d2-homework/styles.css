@@ -346,7 +346,7 @@ textarea {
   text-align: center;
   display: inline-block;
   padding-top: 3.5px;
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 
 .randomcodes {
@@ -417,6 +417,12 @@ textarea {
   section #partners .partner {
     margin: 0.75em;
   }
+  .button button {
+    margin-left: 22.5em;
+  }
+  .randomcodes input {
+    margin-left: 11.5em;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -473,6 +479,12 @@ textarea {
   section #partners .partner {
     margin: 2em;
   }
+  .button button {
+    margin-left: 22.5em;
+  }
+  .randomcodes input {
+    margin-left: 11.5em;
+  }
 }
 
 @media only screen and (max-width: 425px) {
@@ -485,10 +497,10 @@ textarea {
     width: 90%;
   }
   .button button {
-    margin-left: 10em;
+    margin-left: 15em;
   }
   .randomcodes input {
-    margin-left: 0;
+    margin-left: 0.01em;
   }
 }
 
@@ -502,6 +514,13 @@ textarea {
   #myNavbar a {
     width: 90%;
     margin-left: 3.6em;
+  }
+  .randomcodes input {
+    width: 10em;
+    margin-left: 9.5%;
+  }
+  .button button {
+    margin-left: 13.2em;
   }
 }
 
@@ -524,5 +543,8 @@ textarea {
   }
   #cliff label {
     width: 80%;
+  }
+  .randomcodes input {
+    width: 10em;
   }
 }
