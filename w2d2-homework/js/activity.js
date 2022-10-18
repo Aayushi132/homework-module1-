@@ -27,23 +27,26 @@ $(function () {
 $("td").click(function () {
   var index = $(this).index();
   var heading = $("th").eq(index).text();
-  debugger;
+
   var content = $(this).text();
 
   if (content != "Not Available") {
     $(this).toggleClass("greenBackground");
 
     if ($(this).hasClass("greenBackground")) {
-      $("#displaySelected").css("visibility", "visible");
-      $("#displaySelected").css("margin-top", "2em");
-      $("#result").append("<p>" + content + " at " + heading + "</p>");
+      $("#myModal").modal("show");
+      $(".modal-body").append("<p>" + content + " at " + heading + "</p>");
     } else {
-      $("#result p:contains(" + content + ")").remove();
+      $(".modal-body p:contains(" + content + ")").remove();
 
-      if ($("#result").has("p").length == false) {
-        $("#displaySelected").css("visibility", "hidden");
-        $("#displaySelected").css("margin-top", "0");
+      if ($(".modal-body").has("p").length == false) {
+        $("#myModal").modal("hide");
       }
     }
   }
 });
+
+$(".back").click(function () {
+  $("#myModal").modal("hide");
+}
+  );

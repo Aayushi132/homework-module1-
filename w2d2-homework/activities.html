@@ -7,14 +7,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
     />
-
-    
 
     <link rel="stylesheet" href="styles.css" />
     <title>Aayushi's First Web Page</title>
@@ -22,7 +26,7 @@
   <body id="activities">
     <!-- Container to wrap everything -->
     <div id="container">
-     <div class="main-header">
+      <div class="main-header-activity">
         <div class="logo">
           <!-- <img src="images/logo.png" alt="Great Cliffs Logo" width="125" /> -->
           <nav class="navbar navbar-expand-lg navbar-light">
@@ -48,13 +52,13 @@
                 <div class="navbar-nav">
                   <a class="nav-link" href="index.html">HOME</a>
                   <a class="nav-link" href="cliffs.html">CLIFFS</a>
-                  <a class="nav-link active"
-                    aria-current="page" href="activities.html">EVENTS</a>
                   <a
-                    class="nav-link"
-                    href="contact.html"
-                    >CONTACT</a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="activities.html"
+                    >EVENTS</a
                   >
+                  <a class="nav-link" href="contact.html">CONTACT</a>
                 </div>
               </div>
             </div>
@@ -129,7 +133,50 @@
           </table>
         </div>
 
-        <div id="displaySelected">
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          id="btnclass"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#myModal"
+        >
+          Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">My selected activities to enquire:</h5>
+                <button
+                  type="button"
+                  class="close back"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body"></div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-success back"
+                  data-dismiss="modal"
+                >
+                  Back to Activities
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Get Info
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div id="displaySelected">
           <div id="result">
             <h4>My selected activities to enquire:</h4>
           </div>
@@ -137,7 +184,7 @@
             <input type="email" placeholder="johndoe@gmail.com" />
             <button>Get Info</button>
           </div>
-        </div>
+        </div> -->
       </main>
       <!-- End Main Content -->
       <section>
@@ -204,6 +251,13 @@
       </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
